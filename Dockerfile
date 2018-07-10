@@ -2,7 +2,7 @@ FROM cloudbees/cje-mm:2.121.1.2
 
 LABEL maintainer "kmadel@cloudbees.com"
 
-USER jenkins
+USER root
 
 #skip setup wizard and disable CLI
 ENV JVM_OPTS -Djenkins.CLI.disabled=true -server
@@ -25,3 +25,5 @@ COPY jenkins-support /usr/local/bin/jenkins-support
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 
 RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
+
+USER jenkins
