@@ -199,7 +199,7 @@ main() {
     fi
 
     echo "Cleaning up locks"
-    rm -r "$REF_DIR"/*.lock
+    #rm -r "$REF_DIR"/*.lock
 }
 
 main "$@"
