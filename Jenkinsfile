@@ -10,7 +10,7 @@ pipeline {
           agent none
         //checkpoint 'Before Docker Build and Push'
           steps {
-            dockerBuildPush('beedemo/cje-mm', 'kaniko-1', '.') {
+            dockerBuildPush('beedemo/cje-mm', 'kaniko-1') {
               //nothting to do here
             }
           }
