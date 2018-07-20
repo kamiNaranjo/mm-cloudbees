@@ -12,4 +12,5 @@ workflow-cps-checkpoint:2.7
 momentjs:1.1.1
 handlebars:1.1.1
 cloudbees-template:4.36
+skip-plugin:4.1
 

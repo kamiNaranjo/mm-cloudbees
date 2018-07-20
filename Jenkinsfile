@@ -11,7 +11,7 @@ pipeline {
           agent none
         //checkpoint 'Before Docker Build and Push'
           steps {
-            dockerBuildPush('beedemo/cje-mm', '2.121.2.1-kaniko-1','./') {
+            dockerBuildPush('beedemo/cje-mm', '2.121.2.1-kube-workshop','./') {
               git branch: 'kube-workshop', credentialsId: 'kypseli-github-token', poll: false, url: 'https://github.com/kypseli/cje-mm.git' 
             }
           }
