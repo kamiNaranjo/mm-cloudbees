@@ -2,10 +2,10 @@ cloudbees-workflow-template:2.7
 cloudbees-workflow-ui:2.1
 notification-api:1.1
 operations-center-notification:1.0
-pipeline-event-step:1.1
-pipeline-rest-api:2.9
+pipeline-event-step:1.2
+pipeline-rest-api:2.10
 pipeline-stage-step:2.2
-pipeline-stage-view:2.9
+pipeline-stage-view:2.10
 pipeline-utility-steps:2.0.2
 workflow-cps-global-lib:2.9
 workflow-cps-checkpoint:2.7
@@ -13,4 +13,5 @@ momentjs:1.1.1
 handlebars:1.1.1
 cloudbees-template:4.36
 skip-plugin:4.1
+
 
