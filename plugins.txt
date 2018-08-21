@@ -1,3 +1,5 @@
+configuration-as-code:1.0-rc1
+configuration-as-code-support:1.0-rc1
 cloudbees-workflow-template:2.7
 cloudbees-workflow-ui:2.1
 notification-api:1.1
