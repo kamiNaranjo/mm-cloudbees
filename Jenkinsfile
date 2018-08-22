@@ -11,7 +11,7 @@ pipeline {
           agent none
         //checkpoint 'Before Docker Build and Push'
           steps {
-            dockerBuildPush('946759952272.dkr.ecr.us-east-1.amazonaws.com/kypseli/cb-core-mm:', '2.121.3.1-3','./') {
+            dockerBuildPush('946759952272.dkr.ecr.us-east-1.amazonaws.com/kypseli/cb-core-mm', '2.121.3.1-3','./') {
               git branch: 'kube-workshop', credentialsId: 'kypseli-github-token', poll: false, url: 'https://github.com/kypseli/cje-mm.git' 
             }
           }
