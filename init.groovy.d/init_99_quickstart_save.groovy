@@ -10,8 +10,4 @@ if (disableSaveScript.exists()) {
     return
 } 
 
-def sleepTime = Math.abs(new Random().nextInt() % 40000) +10000
-logger.info("sleep for $sleepTime milliseconds")
-sleep sleepTime
-
 new File(Jenkins.getInstance().getRootDir(), ".disable-init_99_quickstart_save-script").createNewFile()
