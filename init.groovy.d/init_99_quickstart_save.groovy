@@ -10,8 +10,4 @@ if (disableSaveScript.exists()) {
     return
 } 
 
-new File(Jenkins.getInstance().getRootDir(), ".disable-init-script").createNewFile()
-logger.info("init.d configuration finished")
-Jenkins.getInstance().save()
-
 new File(Jenkins.getInstance().getRootDir(), ".disable-init_99_quickstart_save-script").createNewFile()
