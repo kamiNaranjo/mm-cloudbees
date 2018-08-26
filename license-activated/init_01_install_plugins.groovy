@@ -46,4 +46,4 @@ ACL.impersonate(ACL.SYSTEM, new Runnable() {
     }
 });
 
-disableScript.createNewFile()
+//disableScript.createNewFile()

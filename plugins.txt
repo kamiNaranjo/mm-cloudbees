@@ -18,5 +18,3 @@ cloudbees-template:4.36
 skip-plugin:4.1
 slack:2.3
 github-oauth:0.29
-
-
