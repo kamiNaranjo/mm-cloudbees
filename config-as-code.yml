@@ -22,6 +22,5 @@ unclassified:
           scm:
             github:
               credentialsId: "kypseli-github-token"
-              id: "1218532a-b993-4a4c-976f-7c0d8871cbe3"
               repoOwner: "kypseli"
               repository: "pipeline-library"
