@@ -13,6 +13,10 @@ jenkins:
       disableSyntaxHighlighting: true
   numExecutors: 0
 unclassified:
+  artifactManager:
+    artifactManagerFactories:
+      - jclouds:
+          provider: s3
   globallibraries:
     libraries:
     - defaultVersion: "master"
@@ -24,3 +28,11 @@ unclassified:
               credentialsId: "kypseli-github-token"
               repoOwner: "kypseli"
               repository: "pipeline-library"
+  slackNotifier:
+    teamDomain: beedemo-team
+    tokenCredentialId: slack-beedemo-ci
+    room: "#ci"
+aws:
+  s3:
+    container: "cd-accel"
+    prefix: "cb-core/artifacts/"
