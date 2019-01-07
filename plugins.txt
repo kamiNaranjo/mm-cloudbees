@@ -26,3 +26,4 @@ aws-credentials:1.23
 artifact-manager-s3:1.1
 aws-global-configuration:1.0
 devoptics:1.1607
+slack:2.4
