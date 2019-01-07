@@ -34,5 +34,5 @@ unclassified:
     room: "#ci"
 aws:
   s3:
-    container: "cd-accel"
+    container: "kypseli"
     prefix: "cb-core/artifacts/"
