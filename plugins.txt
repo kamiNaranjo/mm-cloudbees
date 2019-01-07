@@ -1,6 +1,7 @@
 antisamy-markup-formatter:1.5
 configuration-as-code:1.4
 configuration-as-code-support:1.4
+cloudbees-console-log-masker:1.0.3
 cloudbees-workflow-template:2.7
 cloudbees-workflow-ui:2.1
 notification-api:1.1
