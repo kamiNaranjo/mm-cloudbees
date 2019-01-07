@@ -28,10 +28,6 @@ unclassified:
               credentialsId: "kypseli-github-token"
               repoOwner: "kypseli"
               repository: "pipeline-library"
-  slackNotifier:
-    teamDomain: beedemo-team
-    tokenCredentialId: slack-beedemo-ci
-    room: "#ci"
 aws:
   s3:
     container: "kypseli"
