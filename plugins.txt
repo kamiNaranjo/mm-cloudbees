@@ -16,7 +16,7 @@ momentjs:1.1.1
 handlebars:1.1.1
 cloudbees-template:4.36
 skip-plugin:4.1
-github-oauth:0.29
+github-oauth:0.31
 aws-credentials:1.23
 artifact-manager-s3:1.1
 aws-global-configuration:1.0
