@@ -22,5 +22,5 @@ aws-credentials:1.23
 artifact-manager-s3:1.1
 aws-global-configuration:1.0
 github-branch-source:2.4.1
-devoptics:1.1607
-slack:2.12
+devoptics:1.1617
+slack:2.14
