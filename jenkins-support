@@ -54,30 +54,26 @@ copy_reference_file() {
         image_version=$(get_plugin_version "${f}")
         if [[ -e $JENKINS_HOME/${version_marker} ]]; then
             marker_version=$(cat "$JENKINS_HOME/${version_marker}")
-            if versionLT "$marker_version" "$container_version"; then
+            if [[ "$image_version" == "$container_version" ]]; then
                 action="SKIPPED"
-                reason="Installed version ($container_version) has been manually upgraded from initial version ($marker_version)"
                 log=true
+                reason="Version from image is the same as the installed version $image_version"
             else
-                if [[ "$image_version" == "$container_version" ]]; then
+                if versionLT "$image_version" "$container_version"; then
                     action="SKIPPED"
-                    reason="Version from image is the same as the installed version $image_version"
+                    log=true
+                    reason="Image version ($image_version) is older than installed version ($container_version)"
                 else
-                    if versionLT "$image_version" "$container_version"; then
-                        action="SKIPPED"
-                        log=true
-                        reason="Image version ($image_version) is older than installed version ($container_version)"
-                    else
-                        action="UPGRADED"
-                        log=true
-                        reason="Image version ($image_version) is newer than installed version ($container_version)"
-                    fi
+                    action="UPGRADED"
+                    log=true
+                    reason="Image version ($image_version) is newer than installed version ($container_version)"
                 fi
             fi
         else
             if [[ -n "$TRY_UPGRADE_IF_NO_MARKER" ]]; then
                 if [[ "$image_version" == "$container_version" ]]; then
                     action="SKIPPED"
+                    log=true
                     reason="Version from image is the same as the installed version $image_version (no marker found)"
                     # Add marker for next time
                     echo "$image_version" > "$JENKINS_HOME/${version_marker}"
@@ -105,6 +101,8 @@ copy_reference_file() {
             reason=${reason:-$image_version}
         else
             action=${action:-"SKIPPED"}
+            log=true
+            reason="no upgrade or override"
         fi
     else
         if [[ ! -e $JENKINS_HOME/${rel} || $f = *.override ]]
@@ -115,6 +113,8 @@ copy_reference_file() {
             cp -pr "$(realpath "${f}")" "$JENKINS_HOME/${rel}";
         else
             action="SKIPPED"
+            log=true
+            reason="no upgrade"
         fi
     fi
     if [[ -n "$VERBOSE" || "$log" == "true" ]]; then
