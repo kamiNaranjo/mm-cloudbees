@@ -10,6 +10,8 @@ ARG user=jenkins
 ENV JVM_OPTS -Djenkins.CLI.disabled=true -server
 ENV TZ="/usr/share/zoneinfo/America/New_York"
 
+RUN mkdir -p /usr/share/jenkins/ref/init.groovy.d
+
 #Jenkins system configuration via init groovy scripts - see https://wiki.jenkins-ci.org/display/JENKINS/Configuring+Jenkins+upon+start+up 
 COPY ./init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
 COPY ./license-activated/* /usr/share/jenkins/ref/license-activated-or-renewed-after-expiration.groovy.d/
@@ -25,6 +27,8 @@ ENV CASC_JENKINS_CONFIG /usr/share/jenkins/config-as-code.yml
 #install suggested and additional plugins
 ENV JENKINS_UC http://jenkins-updates.cloudbees.com
 ENV TRY_UPGRADE_IF_NO_MARKER=true
+
+RUN chown -R ${user} /usr/share/jenkins/ref
 
 USER ${user}
 
