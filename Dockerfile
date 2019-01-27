@@ -38,6 +38,6 @@ RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
 
 USER ${user}
 
-COPY jenkins.sh /var/jenkins_home/jenkinz.sh
+COPY jenkins.sh /usr/share/jenkins/ref/jenkinz.sh
 
-ENTRYPOINT ["/sbin/tini", "--", "/var/jenkins_home/jenkinz.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/usr/share/jenkins/ref/jenkinz.sh"]
