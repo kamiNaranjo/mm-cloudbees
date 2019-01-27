@@ -83,7 +83,7 @@ doDownload() {
     fi
 
     echo "Downloading plugin: $plugin from $url"
-    retry_command curl "${CURL_OPTIONS:--sSfL}" --connect-timeout "${CURL_CONNECTION_TIMEOUT:-20}" --retry "${CURL_RETRY:-3}" --retry-delay "${CURL_RETRY_DELAY:-0}" --retry-max-time "${CURL_RETRY_MAX_TIME:-60}" "$url" -o "$jpi.override"
+    retry_command curl "${CURL_OPTIONS:--sSfL}" --connect-timeout "${CURL_CONNECTION_TIMEOUT:-20}" --retry "${CURL_RETRY:-3}" --retry-delay "${CURL_RETRY_DELAY:-0}" --retry-max-time "${CURL_RETRY_MAX_TIME:-60}" "$url" -o "$jpi"
     return $?
 }
 
@@ -262,6 +262,8 @@ main() {
     find "$REF_DIR" -regex ".*.lock" | while read -r filepath; do
         rm -r "$filepath"
     done
+
+    find $REF_DIR -type f -exec mv '{}' '{}'.overrid \;
 
 }
 
