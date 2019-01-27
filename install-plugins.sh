@@ -262,9 +262,6 @@ main() {
     find "$REF_DIR" -regex ".*.lock" | while read -r filepath; do
         rm -r "$filepath"
     done
-
-    find $REF_DIR -type f -exec mv '{}' '{}'.overrid \;
-
 }
 
 main "$@"
