@@ -119,9 +119,9 @@ copy_reference_file() {
     fi
     if [[ -n "$VERBOSE" || "$log" == "true" ]]; then
         if [ -z "$reason" ]; then
-            echo "$action $rel" >> "$COPY_REFERENCE_FILE_LOG"
+            echo "$action $rel test" >> "$COPY_REFERENCE_FILE_LOG"
         else
-            echo "$action $rel : $reason" >> "$COPY_REFERENCE_FILE_LOG"
+            echo "$action $rel : $reason test" >> "$COPY_REFERENCE_FILE_LOG"
         fi
     fi
 }
