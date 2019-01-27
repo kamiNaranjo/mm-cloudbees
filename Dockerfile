@@ -36,6 +36,4 @@ RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
 
 COPY jenkins.sh /usr/local/bin/jenkins.sh
 
-RUN chown -R ${user} /usr/local/bin/
-
 USER ${user}
