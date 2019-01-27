@@ -7,8 +7,6 @@ USER root
 #skip setup wizard and disable CLI
 ENV JVM_OPTS -Djenkins.CLI.disabled=true -server
 ENV TZ="/usr/share/zoneinfo/America/New_York"
-ENV JENKINS_HOME /var/jenkins_home
-ENV REF_DIR=/usr/share/jenkins/ref
 
 #Jenkins system configuration via init groovy scripts - see https://wiki.jenkins-ci.org/display/JENKINS/Configuring+Jenkins+upon+start+up 
 COPY ./init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
@@ -23,14 +21,13 @@ COPY config-as-code.yml /usr/share/jenkins/config-as-code.yml
 ENV CASC_JENKINS_CONFIG /usr/share/jenkins/config-as-code.yml
 
 COPY ./jenkins_ref /usr/share/jenkins/ref
-RUN chown -R jenkins $JENKINS_HOME $REF_DIR /usr/local/bin/
 
 #install suggested and additional plugins
-USER jenkins
 ENV JENKINS_UC http://jenkins-updates.cloudbees.com
 ENV TRY_UPGRADE_IF_NO_MARKER true
 COPY plugins.txt plugins.txt
-COPY jenkins-support /usr/local/bin/jenkins-support
-COPY jenkins.sh /usr/local/bin/jenkins.sh
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
+
 RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
+
+USER jenkins
