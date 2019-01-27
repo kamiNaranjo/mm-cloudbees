@@ -7,6 +7,8 @@ USER root
 #skip setup wizard and disable CLI
 ENV JVM_OPTS -Djenkins.CLI.disabled=true -server
 ENV TZ="/usr/share/zoneinfo/America/New_York"
+ENV JENKINS_HOME /var/jenkins_home
+ENV REF_DIR=/usr/share/jenkins/ref
 
 #Jenkins system configuration via init groovy scripts - see https://wiki.jenkins-ci.org/display/JENKINS/Configuring+Jenkins+upon+start+up 
 COPY ./init.groovy.d/* /usr/share/jenkins/ref/init.groovy.d/
