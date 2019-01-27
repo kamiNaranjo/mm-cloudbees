@@ -32,4 +32,6 @@ COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 
 RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
 
-USER jenkins
+RUN chown -R ${user} $JENKINS_HOME $REF_DIR
+
+USER ${user} 
