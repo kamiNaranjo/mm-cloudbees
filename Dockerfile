@@ -35,3 +35,7 @@ COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
 
 COPY jenkins.sh /usr/local/bin/jenkins.sh
+
+USER ${user}
+
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/jenkins.sh"]
