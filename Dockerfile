@@ -27,6 +27,7 @@ ENV JENKINS_UC http://jenkins-updates.cloudbees.com
 ENV TRY_UPGRADE_IF_NO_MARKER true
 COPY plugins.txt plugins.txt
 COPY jenkins-support /usr/local/bin/jenkins-support
+COPY jenkins.sh /usr/local/bin/jenkins.sh
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 
 RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
