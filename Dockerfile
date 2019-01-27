@@ -23,7 +23,7 @@ COPY config-as-code.yml /usr/share/jenkins/config-as-code.yml
 ENV CASC_JENKINS_CONFIG /usr/share/jenkins/config-as-code.yml
 
 COPY ./jenkins_ref /usr/share/jenkins/ref
-RUN chown -R jenkins $JENKINS_HOME $REF_DIR
+RUN chown -R jenkins $JENKINS_HOME $REF_DIR /usr/local/bin/
 
 #install suggested and additional plugins
 USER jenkins
