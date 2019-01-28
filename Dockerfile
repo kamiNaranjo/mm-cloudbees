@@ -32,8 +32,6 @@ RUN chown -R ${user} /usr/share/jenkins/ref
 
 COPY jenkins.sh /usr/share/jenkins/ref/jenkinz.sh
 
-USER ${user}
-
 COPY ./jenkins_ref /usr/share/jenkins/ref
 COPY plugins.txt plugins.txt
 COPY jenkins-support /usr/local/bin/jenkins-support
