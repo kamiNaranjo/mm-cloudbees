@@ -28,15 +28,7 @@ unclassified:
               credentialsId: "kypseli-github-token"
               repoOwner: "kypseli"
               repository: "pipeline-library"
-  slackNotifier:
-    teamDomain: beedemo-team
-    tokenCredentialId: slack-kypseli
-    room: "#kypseli"
 aws:
   s3:
     container: "kypseli"
     prefix: "cb-core/artifacts/"
-plugins:
-  required:
-    slack: http://jenkins-updates.cloudbees.com/download/plugins/slack/2.14/slack.hpi
-    devoptics: http://jenkins-updates.cloudbees.com/download/plugins/devoptics/1.1617/devoptics.hpi
