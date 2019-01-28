@@ -36,3 +36,7 @@ aws:
   s3:
     container: "kypseli"
     prefix: "cb-core/artifacts/"
+plugins:
+  required:
+    slack: latest
+    devoptics: latest
