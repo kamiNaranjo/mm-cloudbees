@@ -28,6 +28,9 @@ ENV CASC_JENKINS_CONFIG /usr/share/jenkins/config-as-code.yml
 ENV JENKINS_UC http://jenkins-updates.cloudbees.com
 ENV TRY_UPGRADE_IF_NO_MARKER=true
 
+RUN mkdir -p /usr/share/jenkins/ref/plugins
+RUN chown -R ${user} /usr/share/jenkins/ref
+
 USER ${user}
 
 COPY ./jenkins_ref /usr/share/jenkins/ref
