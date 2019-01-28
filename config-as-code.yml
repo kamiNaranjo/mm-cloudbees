@@ -38,5 +38,5 @@ aws:
     prefix: "cb-core/artifacts/"
 plugins:
   required:
-    slack: latest
-    devoptics: http://jenkins-updates.cloudbees.com/download/plugins/devoptics/1.1617/devoptics.hpi
+    slack: 2.14
+    devoptics: 1.1617
