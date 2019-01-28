@@ -39,4 +39,4 @@ aws:
 plugins:
   required:
     slack: latest
-    devoptics: latest
+    devoptics: http://jenkins-updates.cloudbees.com/download/plugins/devoptics/1.1617/devoptics.hpi
