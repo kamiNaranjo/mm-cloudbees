@@ -1,4 +1,6 @@
 jenkins:
+  systemMessage: |-
+    Welcome to a Dockerized config-as-code version of Jenkins!
   agentProtocols:
   - "Diagnostic-Ping"
   - "JNLP4-connect"

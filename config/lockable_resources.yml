@@ -1,0 +1,9 @@
+RESOURCES:
+    - NAME: 'Lock1'
+      DESCRIPTION: 'test lock 1'
+      LABELS: 'label1'
+      RESERVED_BY: 'miguel'
+    - NAME: 'Lock2'
+      DESCRIPTION: 'test lock 2'
+      LABELS: 'label1'
+      RESERVED_BY: 'miguel s'
