@@ -30,12 +30,8 @@ maven-plugin:3.1
 config-file-provider:2.15.6
 ssh-slaves:1.13
 ivy:1.28
-rundeck:3.6.4
-sonar:2.8.1
-lockable-resources:2.4
 ca-apm:1.0
 splunk-devops:1.7.1
-artifactory:3.2.0
 jira:3.0.2
 veracode-scanner:1.6
 email-ext:2.62
@@ -44,3 +40,8 @@ openstack-cloud:2.42
 ldap:1.20
 gradle:1.15
 handy-uri-templates-2-api:2.1.6-1.0
+sonar:2.8.1
+quality-gates:2.5
+lockable-resources:2.4
+artifactory:3.2.0
+rundeck:3.6.4

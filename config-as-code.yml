@@ -1,6 +1,6 @@
 jenkins:
   systemMessage: |-
-    Welcome to a Dockerized config-as-code version of Jenkins!
+    No hagan tantos daños en pdn!
   agentProtocols:
   - "Diagnostic-Ping"
   - "JNLP4-connect"
@@ -11,7 +11,14 @@ unclassified:
     buildWrapperEnabled: true
     installations:
       - name: sonarPDN
-        serverUrl: http://srintcp04:4748
+        serverUrl: http://sonarPDN:1040
+  artifactorybuilder:
+    useCredentialsPlugin: true
+    artifactoryServers:
+      - serverId: artifactoryPDN
+        artifactoryUrl: http://arti/Aritfactory
+        deployerCredentialsConfig:
+          credentialsId: 'artifactory'
 credentials:
   system:
     domainCredentials:
