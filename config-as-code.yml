@@ -6,16 +6,16 @@ jenkins:
   - "JNLP4-connect"
   - "OperationsCenter2"
   - "Ping"
-  credentials:
-    system:
-      domainCredentials:
-        - credentials:
-            - usernamePassword:
-                scope: GLOBAL
-                id: "artifactory"
-                username: "artifactory"
-                password: "artifactory"
-                description: "Usuario de conexión a artifactory"
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "artifactory"
+              username: "artifactory"
+              password: "artifactory"
+              description: "Username/Password Credentials for artifactory"
 unclassified:
   sonarGlobalConfiguration:
     buildWrapperEnabled: true
