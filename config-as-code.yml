@@ -12,3 +12,13 @@ unclassified:
     installations:
       - name: sonarPDN
         serverUrl: http://srintcp04:4748
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "artifactory"
+              username: "artifactory"
+              password: "artifactory"
+              description: "Usuario de artifactory"
