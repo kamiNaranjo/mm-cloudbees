@@ -6,26 +6,9 @@ jenkins:
   - "JNLP4-connect"
   - "OperationsCenter2"
   - "Ping"
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - usernamePassword:
-              scope: GLOBAL
-              id: "artifactory"
-              username: "artifactory"
-              password: "artifactory"
-              description: "Username/Password Credentials for artifactory"
 unclassified:
   sonarGlobalConfiguration:
     buildWrapperEnabled: true
     installations:
       - name: sonarPDN
         serverUrl: http://srintcp04:4748
-  artifactorybuilder:
-    useCredentialsPlugin: true
-    artifactoryServers:
-      - serverId: artifactoryPDN
-        artifactoryUrl: http://10.216.24.48:8081/artifactory
-        deployerCredentialsConfig:
-          credentialsId: 'artifactory'
