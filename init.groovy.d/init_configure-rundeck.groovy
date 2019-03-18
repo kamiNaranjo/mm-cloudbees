@@ -5,7 +5,8 @@ def url  = "http://url.com"
 def aut  = "holiholi"
 def api  = 12
 
-rundeck = Jenkins.instance.getExtensionList(org.jenkinsci.plugins.rundeck.RundeckNotifier.RundeckDescriptor.class)[0];
+Jenkins jenkins = Jenkins.getInstance()
+rundeck = jenkins.instance.getExtensionList(org.jenkinsci.plugins.rundeck.RundeckNotifier.RundeckDescriptor.class)[0];
 println "Inicio configuracion rundeck"
 RundeckClient rundeckClient = RundeckClient.builder()
 								.url(url)
