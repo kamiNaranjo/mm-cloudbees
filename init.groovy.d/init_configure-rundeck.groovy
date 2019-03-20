@@ -7,7 +7,7 @@ def aut  = "holiholi"
 def api  = 12
 
 rundeck = Jenkins.instance.getExtensionList(org.jenkinsci.plugins.rundeck.RundeckNotifier.RundeckDescriptor.class)[0];
-println "Inicio configuracion rundeck"
+println "Configurando plugin Rundeck"
 RundeckClient rundeckClient = RundeckClient.builder()
 								.url(url)
 								.token(aut)
