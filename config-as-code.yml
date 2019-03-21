@@ -19,6 +19,12 @@ unclassified:
         artifactoryUrl: http://arti/Aritfactory
         deployerCredentialsConfig:
           credentialsId: 'artifactory'
+   githubpluginconfig:
+    configs:
+    - name: "gitSu"
+      apiUrl: "http://inb..git.com"
+      credentialsId: "conexiongit"
+      manageHooks: true
 credentials:
   system:
     domainCredentials:
@@ -29,3 +35,9 @@ credentials:
               username: "artifactory"
               password: "artifactory"
               description: "Usuario de artifactory"
+          - usernamePassword:
+              scope: GLOBAL
+              id: "conexiongit"
+              username: "conexiongit"
+              password: "conexiongit"
+              description: "Usuario de git"
