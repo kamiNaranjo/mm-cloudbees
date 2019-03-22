@@ -1,3 +1,4 @@
+
 jenkins:
   systemMessage: |-
     No hagan tantos daños en pdn!
@@ -19,7 +20,7 @@ unclassified:
         artifactoryUrl: http://arti/Aritfactory
         deployerCredentialsConfig:
           credentialsId: 'artifactory'
-   githubpluginconfig:
+  githubpluginconfig:
     configs:
     - name: "gitSu"
       apiUrl: "http://inb..git.com"
@@ -41,3 +42,4 @@ credentials:
               username: "conexiongit"
               password: "conexiongit"
               description: "Usuario de git"
+© 2019 GitHub, Inc.
