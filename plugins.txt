@@ -45,4 +45,3 @@ quality-gates:2.5
 lockable-resources:2.4
 artifactory:3.2.0
 rundeck:3.6.4
-jobConfigHistory:2.19
