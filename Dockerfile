@@ -43,3 +43,4 @@ COPY install-plugins.sh /usr/local/bin/install-plugins.sh
 COPY installCustomPlugins.sh /usr/local/bin/installCustomPlugins.sh
 RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
 RUN /usr/local/bin/installCustomPlugins.sh customPlugins.txt
+
