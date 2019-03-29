@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PLUGINS_HOME=/var/jenkins_home/plugins
-ARTIFACTORY_URL=https://artifactory-labo.suramericana.com.co/artifactory/jenkinsCustomPlugins
+ARTIFACTORY_URL=http://10.207.24.202:8081/artifactory/jenkinsCustomPlugins
 filename=$1
 IFS=$'\n'
 for next in $(cat $filename); do
