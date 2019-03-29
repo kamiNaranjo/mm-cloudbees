@@ -37,6 +37,9 @@ USER ${user}
 
 COPY ./jenkins_ref /usr/share/jenkins/ref
 COPY plugins.txt plugins.txt
+COPY customPlugins.txt customPlugins.txt
 COPY jenkins-support /usr/local/bin/jenkins-support
 COPY install-plugins.sh /usr/local/bin/install-plugins.sh
+COPY installCustonPlugins.sh /usr/local/bin/installCustonPlugins.sh
 RUN /usr/local/bin/install-plugins.sh $(cat plugins.txt)
+RUN /usr/local/bin/installCustonPlugins.sh $(cat customPlugins.txt)
